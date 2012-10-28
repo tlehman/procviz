@@ -1,0 +1,406 @@
+digraph { 
+    1 [label="init           "]
+    2 [label="kthreadd       "]
+    3 [label="ksoftirqd/0    "]
+    6 [label="migration/0    "]
+    7 [label="watchdog/0     "]
+    8 [label="migration/1    "]
+   10 [label="ksoftirqd/1    "]
+   12 [label="watchdog/1     "]
+   13 [label="cpuset         "]
+   14 [label="khelper        "]
+   15 [label="kdevtmpfs      "]
+   16 [label="netns          "]
+   17 [label="kworker/u:1    "]
+   18 [label="sync_supers    "]
+   19 [label="bdi-default    "]
+   20 [label="kintegrityd    "]
+   21 [label="kblockd        "]
+   22 [label="ata_sff        "]
+   23 [label="khubd          "]
+   24 [label="md             "]
+   26 [label="khungtaskd     "]
+   27 [label="kswapd0        "]
+   28 [label="ksmd           "]
+   29 [label="khugepaged     "]
+   30 [label="fsnotify_mark  "]
+   31 [label="ecryptfs-kthrea"]
+   32 [label="crypto         "]
+   40 [label="kthrotld       "]
+   42 [label="scsi_eh_0      "]
+   43 [label="scsi_eh_1      "]
+   44 [label="scsi_eh_2      "]
+   45 [label="scsi_eh_3      "]
+   46 [label="kworker/u:3    "]
+   67 [label="devfreq_wq     "]
+   72 [label="scsi_eh_4      "]
+   73 [label="usb-storage    "]
+  240 [label="scsi_eh_5      "]
+  242 [label="scsi_eh_6      "]
+  303 [label="jbd2/sda2-8    "]
+  310 [label="ext4-dio-unwrit"]
+  391 [label="mount.ntfs     "]
+  410 [label="upstart-udev-br"]
+  413 [label="udevd          "]
+  611 [label="sshd           "]
+  613 [label="dbus-daemon    "]
+  626 [label="bluetoothd     "]
+  628 [label="rsyslogd       "]
+  635 [label="avahi-daemon   "]
+  637 [label="avahi-daemon   "]
+  647 [label="krfcommd       "]
+  661 [label="cupsd          "]
+  674 [label="colord         "]
+  688 [label="kmpathd        "]
+  690 [label="kmpath_handlerd"]
+  694 [label="kpsmoused      "]
+  784 [label="upstart-socket-"]
+  818 [label="python         "]
+  830 [label="modem-manager  "]
+  836 [label="NetworkManager "]
+  854 [label="ttm_swap       "]
+  863 [label="polkitd        "]
+  957 [label="getty          "]
+  958 [label="hd-audio0      "]
+  962 [label="getty          "]
+  971 [label="getty          "]
+  972 [label="getty          "]
+  975 [label="sh             "]
+  978 [label="getty          "]
+  986 [label="start_pms      "]
+  990 [label="Plex Media Serv"]
+ 1012 [label="lightdm        "]
+ 1014 [label="acpid          "]
+ 1022 [label="irqbalance     "]
+ 1023 [label="whoopsie       "]
+ 1040 [label="cron           "]
+ 1041 [label="atd            "]
+ 1050 [label="Xorg           "]
+ 1156 [label="vmware-vmblock-"]
+ 1170 [label="vmnet-bridge   "]
+ 1190 [label="light <defunct>"]
+ 1194 [label="accounts-daemon"]
+ 1216 [label="console-kit-dae"]
+ 1297 [label="vmnet-netifup  "]
+ 1306 [label="vmnet-dhcpd    "]
+ 1310 [label="vmnet-natd     "]
+ 1315 [label="vmnet-netifup  "]
+ 1348 [label="vmnet-dhcpd    "]
+ 1362 [label="vmware-authdlau"]
+ 1388 [label="vmware-usbarbit"]
+ 1462 [label="upowerd        "]
+ 1643 [label="getty          "]
+ 1770 [label="lightdm        "]
+ 1780 [label="chrome         "]
+ 1808 [label="rtkit-daemon   "]
+ 1817 [label="chrome         "]
+ 1825 [label="flush-8:0      "]
+ 1846 [label="Plex DLNA Serve"]
+ 1945 [label="gnome-keyring-d"]
+ 1956 [label="gnome-session  "]
+ 1991 [label="ssh-agent      "]
+ 1994 [label="dbus-launch    "]
+ 1995 [label="dbus-daemon    "]
+ 2007 [label="gnome-settings-"]
+ 2014 [label="gvfsd          "]
+ 2016 [label="gvfs-fuse-daemo"]
+ 2022 [label="compiz         "]
+ 2026 [label="gconfd-2       "]
+ 2032 [label="nm-applet      "]
+ 2033 [label="bluetooth-apple"]
+ 2034 [label="gnome-fallback-"]
+ 2043 [label="polkit-gnome-au"]
+ 2045 [label="nautilus       "]
+ 2050 [label="dropbox        "]
+ 2072 [label="pulseaudio     "]
+ 2082 [label="gvfs-gdu-volume"]
+ 2084 [label="udisks-daemon  "]
+ 2085 [label="udisks-daemon  "]
+ 2112 [label="gconf-helper   "]
+ 2114 [label="gvfs-afc-volume"]
+ 2117 [label="gvfs-gphoto2-vo"]
+ 2122 [label="gvfsd-trash    "]
+ 2134 [label="kworker/0:2    "]
+ 2149 [label="notify-osd     "]
+ 2170 [label="gnome-screensav"]
+ 2174 [label="bamfdaemon     "]
+ 2178 [label="gvfsd-burn     "]
+ 2181 [label="gvfsd-metadata "]
+ 2183 [label="sh             "]
+ 2184 [label="gtk-window-deco"]
+ 2189 [label="mount.ntfs     "]
+ 2193 [label="unity-panel-ser"]
+ 2195 [label="hud-service    "]
+ 2210 [label="indicator-datet"]
+ 2211 [label="indicator-print"]
+ 2216 [label="indicator-messa"]
+ 2217 [label="indicator-sessi"]
+ 2218 [label="indicator-sound"]
+ 2219 [label="indicator-appli"]
+ 2247 [label="geoclue-master "]
+ 2262 [label="ubuntu-geoip-pr"]
+ 2271 [label="gdu-notificatio"]
+ 2279 [label="telepathy-indic"]
+ 2286 [label="mission-control"]
+ 2291 [label="goa-daemon     "]
+ 2297 [label="unity-applicati"]
+ 2298 [label="unity-files-dae"]
+ 2300 [label="unity-music-dae"]
+ 2302 [label="unity-lens-vide"]
+ 2325 [label="zeitgeist-daemo"]
+ 2332 [label="zeitgeist-fts  "]
+ 2337 [label="cat            "]
+ 2344 [label="zeitgeist-datah"]
+ 2368 [label="nm-connection-e"]
+ 2373 [label="unity-scope-vid"]
+ 2375 [label="unity-musicstor"]
+ 2432 [label="update-notifier"]
+ 2444 [label="system-service-"]
+ 2451 [label="kworker/0:1    "]
+ 2458 [label="dconf-service  "]
+ 2502 [label="dbus-launch    "]
+ 2503 [label="dbus-daemon    "]
+ 2554 [label="chrome         "]
+ 2615 [label="kworker/1:0    "]
+ 2619 [label="chrome         "]
+ 2706 [label="man            "]
+ 2716 [label="pager          "]
+ 2938 [label="deja-dup-monito"]
+ 3045 [label="dhclient       "]
+ 3050 [label="dnsmasq        "]
+ 3173 [label="gnome-terminal "]
+ 3179 [label="gnome-pty-helpe"]
+ 3180 [label="bash           "]
+ 3493 [label="chrome         "]
+ 3553 [label="kworker/0:0    "]
+ 3690 [label="software-center"]
+ 3723 [label="bash           "]
+ 3728 [label="aptd           "]
+ 3813 [label="gvfsd-http     "]
+ 3885 [label="bash           "]
+ 3886 [label="ps             "]
+ 3887 [label="grep           "]
+ 7521 [label="vmplayer       "]
+ 7568 [label="vmware-unity-he"]
+12391 [label="udevd          "]
+17031 [label="kworker/1:2    "]
+19843 [label="update-manager "]
+21421 [label="udevd          "]
+29487 [label="dbus           "]
+31749 [label="chrome         "]
+31755 [label="chrome         "]
+31756 [label="chrome-sandbox "]
+31757 [label="chrome         "]
+31761 [label="nacl_helper_boo"]
+31762 [label="chrome         "]
+31796 [label="chrome         "]
+31799 [label="chrome         "]
+31855 [label="chrome         "]
+31862 [label="chrome         "]
+31868 [label="chrome         "]
+31898 [label="chrome         "]
+31968 [label="chrome         "]
+32314 [label="bash           "] 
+    0->    1
+    0->    2
+    2->    3
+    2->    6
+    2->    7
+    2->    8
+    2->   10
+    2->   12
+    2->   13
+    2->   14
+    2->   15
+    2->   16
+    2->   17
+    2->   18
+    2->   19
+    2->   20
+    2->   21
+    2->   22
+    2->   23
+    2->   24
+    2->   26
+    2->   27
+    2->   28
+    2->   29
+    2->   30
+    2->   31
+    2->   32
+    2->   40
+    2->   42
+    2->   43
+    2->   44
+    2->   45
+    2->   46
+    2->   67
+    2->   72
+    2->   73
+    2->  240
+    2->  242
+    2->  303
+    2->  310
+    1->  391
+    1->  410
+    1->  413
+    1->  611
+    1->  613
+    1->  626
+    1->  628
+    1->  635
+  635->  637
+    2->  647
+    1->  661
+    1->  674
+    2->  688
+    2->  690
+    2->  694
+    1->  784
+  990->  818
+    1->  830
+    1->  836
+    2->  854
+    1->  863
+    1->  957
+    2->  958
+    1->  962
+    1->  971
+    1->  972
+    1->  975
+    1->  978
+  975->  986
+  986->  990
+    1-> 1012
+    1-> 1014
+    1-> 1022
+    1-> 1023
+    1-> 1040
+    1-> 1041
+ 1012-> 1050
+    1-> 1156
+    1-> 1170
+ 1012-> 1190
+    1-> 1194
+    1-> 1216
+    1-> 1297
+    1-> 1306
+    1-> 1310
+    1-> 1315
+    1-> 1348
+    1-> 1362
+    1-> 1388
+    1-> 1462
+    1-> 1643
+ 1012-> 1770
+31762-> 1780
+    1-> 1808
+31762-> 1817
+    2-> 1825
+  990-> 1846
+    1-> 1945
+ 1770-> 1956
+ 1956-> 1991
+    1-> 1994
+    1-> 1995
+ 1956-> 2007
+    1-> 2014
+    1-> 2016
+ 1956-> 2022
+    1-> 2026
+ 1956-> 2032
+ 1956-> 2033
+ 1956-> 2034
+ 1956-> 2043
+ 1956-> 2045
+    1-> 2050
+    1-> 2072
+    1-> 2082
+    1-> 2084
+ 2084-> 2085
+ 2072-> 2112
+    1-> 2114
+    1-> 2117
+    1-> 2122
+    2-> 2134
+    1-> 2149
+    1-> 2170
+    1-> 2174
+    1-> 2178
+    1-> 2181
+ 2022-> 2183
+ 2183-> 2184
+    1-> 2189
+    1-> 2193
+    1-> 2195
+    1-> 2210
+    1-> 2211
+    1-> 2216
+    1-> 2217
+    1-> 2218
+    1-> 2219
+    1-> 2247
+    1-> 2262
+ 1956-> 2271
+ 1956-> 2279
+    1-> 2286
+    1-> 2291
+    1-> 2297
+    1-> 2298
+    1-> 2300
+    1-> 2302
+    1-> 2325
+    1-> 2332
+ 2332-> 2337
+    1-> 2344
+    1-> 2368
+    1-> 2373
+    1-> 2375
+ 1956-> 2432
+    1-> 2444
+    2-> 2451
+    1-> 2458
+    1-> 2502
+    1-> 2503
+31762-> 2554
+    2-> 2615
+31762-> 2619
+32314-> 2706
+ 2706-> 2716
+ 1956-> 2938
+  836-> 3045
+  836-> 3050
+    1-> 3173
+ 3173-> 3179
+ 3173-> 3180
+31762-> 3493
+    2-> 3553
+    1-> 3690
+ 3173-> 3723
+    1-> 3728
+    1-> 3813
+ 3723-> 3888
+ 3888-> 3889
+ 3888-> 3890
+ 3888-> 3891
+    1-> 7521
+    1-> 7568
+  413->12391
+    2->17031
+    1->19843
+  413->21421
+  661->29487
+    1->31749
+31749->31755
+31749->31756
+31756->31757
+31757->31761
+31757->31762
+31749->31796
+31762->31799
+31762->31855
+31762->31862
+31762->31868
+31762->31898
+31762->31968
+ 3173->32314 }
