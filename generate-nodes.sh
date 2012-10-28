@@ -1,1 +1,2 @@
-ps -eo %p [label="%c"] > nodes.txt
+# generate the labeled process nodes
+ps -eo "%p [label=\"%c\"]"
