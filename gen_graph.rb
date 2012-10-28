@@ -1,17 +1,13 @@
-def proc_data
-  pid_ppid_comm = `ps axo ppid,pid,comm | grep -v PID`
-  ppcs = pid_ppid_comm.split("\n")
-end
 
 class Node < Struct.new(:ppid, :pid, :command); end
 
 class Graph
   attr_reader :nodes
   
-  def initialize(node_list)
+  def initialize
     @nodes = []
-    node_list.each do |ppc|
-      /(^(\s*)(?<ppid>\d+))\s+(?<pid>\d+)\s+(?<comm>(.*))$/ =~ ppc
+    proc_data.each do |pd|
+      /(^(\s*)(?<ppid>\d+))\s+(?<pid>\d+)\s+(?<comm>(.*))$/ =~ pd
       @nodes << Node.new(ppid, pid, comm)
     end
   end
@@ -20,5 +16,28 @@ class Graph
   end
 
   def to_graphviz
+    dot_file = "digraph proc { \n"
+
+    # nodes 
+    nodes.map do |node|
+     dot_file << "#{node.pid} [label=\"#{node.command}\"] \n"
+    end
+    
+    # edges
+    nodes.map do |node|
+      dot_file << " #{node.ppid} -> #{node.pid} \n"
+    end
+
+    dot_file << "}"
+  end
+
+  private
+
+  def proc_data
+    pid_ppid_comm = `ps axo ppid,pid,comm | grep -v PID`
+    ppcs = pid_ppid_comm.split("\n")
   end
 end
+
+g = Graph.new
+puts g.to_graphviz
