@@ -1,3 +1,4 @@
+require 'pry'
 
 class Node < Struct.new(:ppid, :pid, :command); end
 
@@ -8,8 +9,9 @@ class Graph
     @nodes = []
     proc_data.each do |pd|
       /(^(\s*)(?<ppid>\d+))\s+(?<pid>\d+)\s+(?<comm>(.*))$/ =~ pd
-      @nodes << Node.new(ppid, pid, comm)
+      @nodes << Node.new(ppid, pid, comm.strip)
     end
+    binding.pry
   end
   
   def to_arborjs
@@ -34,7 +36,7 @@ class Graph
   private
 
   def proc_data
-    pid_ppid_comm = `ps axo ppid,pid,comm | grep -v PID`
+    pid_ppid_comm = `ps axo ppid,pid,ucomm | grep -v PID`
     ppcs = pid_ppid_comm.split("\n")
   end
 end
