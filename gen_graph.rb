@@ -11,10 +11,19 @@ class Graph
       /(^(\s*)(?<ppid>\d+))\s+(?<pid>\d+)\s+(?<comm>(.*))$/ =~ pd
       @nodes << Node.new(ppid, pid, comm.strip)
     end
-    binding.pry
   end
   
   def to_arborjs
+    ajs_file = "{ nodes:{"
+
+    i = 0
+    @nodes.each do |node|
+      ajs_file << "'#{node.pid}':{label:'#{node.command}'}"
+      i += 1
+      ajs_file += ", " unless i == @nodes.length
+    end
+
+    ajs_file << " } }"
   end
 
   def to_graphviz
@@ -36,10 +45,10 @@ class Graph
   private
 
   def proc_data
-    pid_ppid_comm = `ps axo ppid,pid,ucomm | grep -v PID`
+    pid_ppid_comm = `ps ao ppid,pid,ucomm | grep -v PID`
     ppcs = pid_ppid_comm.split("\n")
   end
 end
 
 g = Graph.new
-puts g.to_graphviz
+puts g.to_arborjs
