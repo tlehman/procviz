@@ -18,12 +18,16 @@ class Graph
 
     i = 0
     @nodes.each do |node|
-      ajs_file << "'#{node.pid}':{label:'#{node.command}'}"
+      ajs_file << "\t'#{node.pid}':{label:'#{node.command}'}"
       i += 1
-      ajs_file += ", " unless i == @nodes.length
+      ajs_file += ", \n" unless i == @nodes.length
     end
 
-    ajs_file << " } }"
+    ajs_file << " }, 
+       edges:{  
+         #{}
+       }
+    }"
   end
 
   def to_graphviz

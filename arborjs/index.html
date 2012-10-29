@@ -1,0 +1,42 @@
+<html>
+<head>
+  <script language="javascript" type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script language="javascript" type="text/javascript" src="arbor.js" ></script>
+  <script language="javascript" type="text/javascript" src="graphics.js" ></script>
+  <script language="javascript" type="text/javascript" src="renderer.js" ></script>
+  <title>Arbor.JS Examples</title>
+</head>
+<body>
+  <canvas id="viewport" width="800" height="600"></canvas>
+  <script language="javascript" type="text/javascript">
+    var data = { 
+        nodes:{ '56195':{label:'login'}, 
+        '56196':{label:'bash'}, 
+        '96052':{label:'login'}, 
+        '96053':{label:'bash'}, 
+        '96111':{label:'node'}, 
+        '42349':{label:'login'}, 
+        '42350':{label:'bash'}, 
+        '46853':{label:'login'}, 
+        '46854':{label:'bash'}, 
+        '96301':{label:'vim'}, 
+        '96822':{label:'ruby'}, 
+        '96869':{label:'sh'}, 
+        '96870':{label:'ps'}, 
+        '96871':{label:'grep'}, 
+        '96470':{label:'login'}, 
+        '96471':{label:'bash'}, 
+        '96753':{label:'login'}, 
+        '96754':{label:'bash'} }, 
+       edges:{  
+         
+       }
+    };
+
+    var sys = arbor.ParticleSystem(1000, 400, 1);
+    sys.renderer = Renderer("#viewport");
+    sys.graft(data);
+
+  </script>
+</body>
+</html>
