@@ -11,23 +11,26 @@ class Graph
       /(^(\s*)(?<ppid>\d+))\s+(?<pid>\d+)\s+(?<comm>(.*))$/ =~ pd
       @nodes << Node.new(ppid, pid, comm.strip)
     end
+    binding.pry
   end
   
   def to_arborjs
     ajs_file = "{ nodes:{"
 
-    i = 0
     @nodes.each do |node|
       ajs_file << "\t'#{node.pid}':{label:'#{node.command}'}"
-      i += 1
-      ajs_file += ", \n" unless i == @nodes.length
+      ajs_file += ", \n" unless node == @nodes.last
     end
 
-    ajs_file << " }, 
-       edges:{  
-         #{}
-       }
-    }"
+
+    ajs_file << " }, edges:{  "
+
+    @nodes.each do |node|
+      ajs_file << "{ '#{node.ppid}':{}, '#{node.pid}':{} }"
+      ajs_file << ", \n" unless node == @nodes.last
+    end
+
+    ajs_file << "} }"
   end
 
   def to_graphviz
