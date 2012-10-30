@@ -11,7 +11,6 @@ class Graph
       /(^(\s*)(?<ppid>\d+))\s+(?<pid>\d+)\s+(?<comm>(.*))$/ =~ pd
       @nodes << Node.new(ppid, pid, comm.strip)
     end
-    binding.pry
   end
   
   def to_arborjs
@@ -58,4 +57,4 @@ class Graph
 end
 
 g = Graph.new
-puts g.to_arborjs
+puts g.to_graphviz
